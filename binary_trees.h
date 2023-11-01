@@ -17,16 +17,29 @@
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 };
 
 typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
+
+
+/**
+ * struct levelorder_queue_s - Structure for a level-order
+ * traversal queue node
+ * @node: Pointer to a binary_tree_t node
+ * @next: Pointer to the next level-order queue node
+ *
+ * Description: This structure is used for a level-order
+ * traversal queue in a binary tree.
+ * It stores a pointer to a binary_tree_t node and a
+ * reference to the next node in the queue.
+ */
 
 
 typedef struct levelorder_queue_s
@@ -38,3 +51,4 @@ typedef struct levelorder_queue_s
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 #endif
+
