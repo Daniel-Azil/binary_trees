@@ -20,7 +20,7 @@ int p_cfunc(const binary_tree_t *arg)
 
 /**
  * binary_tree_is_full - Custom function
- * @arg: Argument of custom function.
+ * @tree: Argument of custom function.
  * Return:  returns 0 or 1.
  */
 int binary_tree_is_full(const binary_tree_t *tree)

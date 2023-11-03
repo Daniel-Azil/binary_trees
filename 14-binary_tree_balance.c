@@ -1,19 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_balance - Custom function.
- * @tree: Argument of the custom function.
- * Return: returns node count or 0
- */
-int binary_tree_balance(const binary_tree_t *tree)
-{
-	if (tree)
-		return (p_cfunction1(tree->left) - p_cfunction1(tree->right);
-
-	return (0);
-}
-
-/**
  * p_cfunction1 - Custom function.
  * @arg: Argument of the custom function.
  * Return: returns 0, ftn & vtn
@@ -29,3 +16,17 @@ size_t p_cfunction1(const binary_tree_t *arg)
 		return ((vtn > ftn) ? vtn : ftn);
 	}
 	return (0);
+
+
+/**
+ * binary_tree_balance - Custom function.
+ * @tree: Argument of the custom function.
+ * Return: returns node count or 0
+ */
+int binary_tree_balance(const binary_tree_t *tree)
+{
+	if (tree)
+		return (p_cfunction1(tree->left) - p_cfunction1(tree->right);
+
+	return (0);
+}
