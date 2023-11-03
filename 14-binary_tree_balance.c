@@ -26,7 +26,7 @@ size_t p_cfunction1(const binary_tree_t *arg)
 int binary_tree_balance(const binary_tree_t *tree)
 {
 	if (tree)
-		return (p_cfunction1(tree->left) - p_cfunction1(tree->right);
+		return (p_cfunction1(tree->left) - p_cfunction1(tree->right));
 
 	return (0);
 }
