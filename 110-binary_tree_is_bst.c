@@ -21,7 +21,7 @@ int _check_func_(const binary_tree_t *_var, int _arg1, int _argp)
 
 /**
  * binary_tree_is_bst - Custom function.
- * @_var: Argument of function
+ * @tree: Argument of function
  * Return: valid or 0
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
