@@ -1,22 +1,31 @@
 #include "binary_trees.h"
 
 /**
- * A custom function that calculates the count of nodes
- * with at least 1 child in a binary tree.
- * @tree: An argument of the function that points to the
- * root node of the tree for node counting.
- * Return: returns 0 or number of nodes.
+ * binary_tree_balance - Custom function.
+ * @tree: Argument of the custom function.
+ * Return: returns node count or 0
  */
-
-size_t binary_tree_nodes(const binary_tree_t *tree)
+int binary_tree_balance(const binary_tree_t *tree)
 {
-	size_t var_n = 0;
+	if (tree)
+		return (binary_tree_height(tree->left) - binary_tree_height(tree->right));
 
+	return (0);
+}
+
+/**
+ * binary_tree_height - Custom function.
+ * @tree: Argument of the custom function.
+ * Return: returns 0, ftn & vtn
+ */
+size_t binary_tree_height(const binary_tree_t *tree)
+{
 	if (tree)
 	{
-		var_n += (tree->left || tree->right) ? 1 : 0;
-		var_n += binary_tree_nodes(tree->left);
-		var_n += binary_tree_nodes(tree->right);
+		size_t vtn = 0, ftn = 0;
+
+		vtn = tree->left ? 1 + binary_tree_height(tree->left) : 1;
+		ftn = tree->right ? 1 + binary_tree_height(tree->right) : 1;
+		return ((vtn > ftn) ? vtn : ftn);
 	}
-	return (var_n);
-}
+	return (0);
